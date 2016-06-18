@@ -43,4 +43,25 @@ module.exports = function () {
     this.Then(/^its status is (.*)$/, function (status) {
         expect(this.responseBody.data.attributes.status).to.equal(status);
     });
+    
+    
+    
+    this.Given(/^a valid order$/, function () {
+        const 
+            that = this,
+            payload = {
+            data: {
+                type: 'orders',
+                attributes: {
+                    items: [{ product_id: 'aa412cc7-8681-4eaf-acd2-0cbdf7b5d479', quantity: 1}]
+                    }
+                }
+            }
+        
+        return this.doHttpRequest('orders', 'post', payload)
+        .then((response) => {
+            that.existingOrder = response.body;
+            return response;
+        });
+    });
 }
