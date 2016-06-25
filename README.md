@@ -1,2 +1,1 @@
-Sample code for the node.js-based web engineering classes at UniRitter.
-travis build
+[![Build Status](https://travis-ci.org/felipe-scherer/uniritter-node-2016.svg?branch=master)](https://travis-ci.org/felipe-scherer/uniritter-node-2016)
