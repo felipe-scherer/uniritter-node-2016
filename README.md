@@ -4,4 +4,4 @@
 
 [![Test Coverage](https://codeclimate.com/github/felipe-scherer/uniritter-node-2016/badges/coverage.svg)](https://codeclimate.com/github/felipe-scherer/uniritter-node-2016/coverage)
 
-[![Issue Count](https://codeclimate.com/github/felipe-scherer/uniritter-node-2016/badges/issue_count.svg)](https://codeclimate.com/github/felipe-scherer/uniritter-node-2016)
+[![Known Vulnerabilities](https://snyk.io/test/npm/name/badge.svg)](https://snyk.io/test/npm/name)
