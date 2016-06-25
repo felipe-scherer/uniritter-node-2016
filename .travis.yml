@@ -9,5 +9,8 @@ after_script:
 - npm install -g codeclimate-test-reporter
 - codeclimate-test-reporter < coverage/lcov.info
 deploy:
+  provider: heroku
+  on: master
+  app: uniritter-node-2016-scherer
   api_key:
     secure: PkOi0Y7LTHdkeJQDXHnGVr13136/Nbiy8IFmhlMSL0Zizc9TLYsg9ndDZQnWvqqp/HB5um5CBvqOBBKhezlThTnZP6hTlyW42XGDjRfYkT6GFZCVbR2GOrEDAVrxTFymA+aLCXQ/LTczReF0sXHO1RfYyvI6XmLwV/WhmOz18N5J4eUdaGgornP2PDVFQAzU0RwuXchH6FGbXAM4qNGyAFz7byk2G+6pcAalpsJn9ro11+bO+ZC5QtlkhruXxs3hjmoIIHropxUQmMeDOp3CJ3H7I7KTN3ZYgD3hL36WQ02MvmIABa1E39vzdUTdJNnKs+XxOpLbCAHl+tRjigLDIs4GSxIohTPK9gKoEf9nu6Fd1wIlEG6BZ9JO6D/2C1dtuQ0fhQOr3Z+FgW0elsXBEogVXwrY08rgdjN9RguOWi2tE9GLfJ/GnzXg1tCemR0K13n/i+SUgHAZOf1K3VZR+UeN0l5pAH1KqIuz+D/ouVgJoASK9B0mCsGa61QLtLD6EXjQkGNjzxGO3nKAV4yqaqVLneZGfzWdPETJR469lDC4HFMuX/4LV1nzCPsVN0eAz6uWr4HZmphsHEjNPg8BUXp8VGGdDWtFvgnTaAXjOD31zC6QCoczd70LHOoWq6fVLRFNhrQpqtBddIIK03Rbo6dU/4oLHQD2/sjy6Iz981c=
