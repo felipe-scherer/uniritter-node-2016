@@ -1,2 +1,1 @@
-# hapi-harvester-boilerplate
-Boilerplate app for a hapi-harvester API.
+Sample code for the node.js-based web engineering classes at UniRitter.
