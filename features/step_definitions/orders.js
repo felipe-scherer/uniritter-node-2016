@@ -17,7 +17,6 @@ module.exports = function () {
                 }
             }
         
-
         return this.doHttpRequest('orders', 'post', payload)
         .then((response) => {
             that.existingOrder = response.body;

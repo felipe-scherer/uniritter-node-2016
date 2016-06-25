@@ -21,6 +21,7 @@ module.exports = function (server) {
                 )
             }
         }
+        
 
     harvesterPlugin.routes.all(schema).forEach(function (route) {
         server.route(route)
