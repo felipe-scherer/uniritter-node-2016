@@ -3,20 +3,20 @@ module.exports = function () {
         _ = require('lodash'),
         chai = require('chai'),
         expect = chai.expect;
-        
-    this.Given(/^an existing order with a (.*) status$/, function (status) {
+
+    this.Given(/^an existing order with a new status$/, function () {
         const 
             that = this,
             payload = {
             data: {
                 type: 'orders',
                 attributes: {
-                    status: status,
                     items: [{ product_id: '598b04ea-8c20-4240-9c2b-1d36350a8d33', quantity: 1}]
                     }
                 }
             }
         
+
         return this.doHttpRequest('orders', 'post', payload)
         .then((response) => {
             that.existingOrder = response.body;
@@ -43,24 +43,8 @@ module.exports = function () {
         expect(this.responseBody.data.attributes.status).to.equal(status);
     });
     
-    
-    
-    this.Given(/^a valid order$/, function () {
-        const 
-            that = this,
-            payload = {
-            data: {
-                type: 'orders',
-                attributes: {
-                    items: [{ product_id: 'aa412cc7-8681-4eaf-acd2-0cbdf7b5d479', quantity: 1}]
-                    }
-                }
-            }
-        
-        return this.doHttpRequest('orders', 'post', payload)
-        .then((response) => {
-            that.existingOrder = response.body;
-            return response;
-        });
+    this.Then(/^wait a few seconds$/, function (callback) {
+        setTimeout(callback, 3000);
     });
+    
 }
